@@ -11,14 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: pypi
-      url: https://pypi.org/p/a-test-mcp  # Update this
+      url: https://pypi.org/p/a-test-mcp
     permissions:
       id-token: write  # For trusted publishing
 
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0 # Required for uv-dynamic-versioning to get tags
 
       - uses: actions/setup-python@v5
         with:

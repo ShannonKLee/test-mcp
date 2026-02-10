@@ -1,6 +1,6 @@
 [project]
 name = "a-test-mcp"
-version = "0.1.2"
+dynamic = ["version"]
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
@@ -13,7 +13,7 @@ dependencies = [
 a-test-mcp = "test_mcp.main:main"
 
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling", "uv-dynamic-versioning>=0.7.0"]
 build-backend = "hatchling.build"
 
 [dependency-groups]

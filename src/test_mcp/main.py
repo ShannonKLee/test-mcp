@@ -4,6 +4,10 @@ from mcp.server.fastmcp import FastMCP
 mcp = FastMCP("Test MCP")
 
 @mcp.tool()
+def hello_person(name: str) -> str:
+    return f"Hello, {name}!"
+
+@mcp.tool()
 def hello_world():
     return "Hello World!"
 
