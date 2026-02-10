@@ -26,6 +26,9 @@ dev = [
     "pytest-cov>=7.0.0",
 ]
 
+[tool.hatch.version]
+source = "uv-dynamic-versioning"
+
 [tool.mypy]
 plugins = ["pydantic.mypy"]
 mypy_path = ["src"]
@@ -34,7 +37,7 @@ mypy_path = ["src"]
 pythonpath = ["src"]
 
 [tool.hatch.build.targets.wheel]
-  packages = ["src/test_mcp"]
+packages = ["src/test_mcp"]
 
 [tool.coverage.report]
 exclude_also = [
